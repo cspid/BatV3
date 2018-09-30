@@ -5,29 +5,35 @@ using UnityEngine;
 public class pathFinder : MonoBehaviour
 {
 
-	public Transform[] waypoints;
+	public List<Transform>  waypoints;
 	int waypointTarget = 0;
 	public float speed;
-	bool runSonar;
-
+	public bool runSonar;
+    public bool RunOnce = true;
 
 	// Use this for initialization
 	void Enable () {
-		
+        waypoints = new List<Transform>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButtonDown(0)){
-			runSonar = true;
-		}
+		
 
 		if (runSonar == true)
 		{
-			//move to the first waypoint
+            if (RunOnce)
+            {
+                RunOnce = false;
+                waypointTarget = waypoints.Count - 1;
+            }
+            //move to the first waypoint
 			transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointTarget].position, speed * Time.deltaTime);
             //set target to the next waypoint
-			if (transform.position == waypoints[waypointTarget].position && waypointTarget < waypoints.Length - 1) waypointTarget++;
+			if (transform.position == waypoints[waypointTarget].position && waypointTarget > 0) waypointTarget--;
+           // runSonar = false;
 		}
 	}
+
+   
 }
