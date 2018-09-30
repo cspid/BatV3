@@ -1153,9 +1153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2decd6b88c876e740a48dfd071c1ee01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypointprefab: {fileID: 0}
-  trail: {fileID: 0}
-  HasShot: 0
 --- !u!212 &94023902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3752,7 +3749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &339761487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4384,10 +4381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2decd6b88c876e740a48dfd071c1ee01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypointprefab: {fileID: 4207785137071512, guid: bf2e02d6210473d40b16bbc574722997,
-    type: 2}
-  trail: {fileID: 1948435433}
-  HasShot: 0
 --- !u!54 &389569049
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4520,7 +4513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &395876672
 Transform:
   m_ObjectHideFlags: 0
@@ -4965,7 +4958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &498454657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6428,7 +6421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &620925052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6774,7 +6767,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643049935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 3, z: 10}
+  m_LocalPosition: {x: -2.5, y: 4, z: 10}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children:
   - {fileID: 337349784}
@@ -9780,7 +9773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &928026019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11107,7 +11100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1036993848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11859,9 +11852,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1085239734}
   - component: {fileID: 1085239733}
-  - component: {fileID: 1085239736}
-  - component: {fileID: 1085239732}
   - component: {fileID: 1085239731}
+  - component: {fileID: 1085239735}
+  - component: {fileID: 1085239736}
   m_Layer: 0
   m_Name: Red Goal
   m_TagString: Goal
@@ -11869,22 +11862,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1085239731
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1085239730}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1085239732
+--- !u!65 &1085239731
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11919,6 +11897,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1085239735
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085239730}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1085239736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13224,9 +13217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2decd6b88c876e740a48dfd071c1ee01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypointprefab: {fileID: 0}
-  trail: {fileID: 0}
-  HasShot: 0
 --- !u!212 &1273898474
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14951,10 +14941,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1417666066}
   - component: {fileID: 1417666067}
-  - component: {fileID: 1417666068}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Start (White Circle)
-  m_TagString: Goal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15020,21 +15009,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1417666068
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1417666065}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1613099}
-  serializedVersion: 2
-  m_Radius: 0.13075884
 --- !u!1 &1420749611
 GameObject:
   m_ObjectHideFlags: 0
@@ -15676,7 +15650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1468418685
 Transform:
   m_ObjectHideFlags: 0
@@ -16362,7 +16336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527174782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 3, z: 10}
+  m_LocalPosition: {x: 2.5, y: 4, z: 10}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children:
   - {fileID: 556266849}
@@ -19989,27 +19963,6 @@ MonoBehaviour:
   Hash2: []
   Hash3:
   - list:
-    - {fileID: 0}
-    ActiveGameObject: {fileID: 0}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1085239730}
-    ActiveGameObject: {fileID: 1085239730}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1948435433}
-    ActiveGameObject: {fileID: 1948435433}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
     - {fileID: 389569047}
     ActiveGameObject: {fileID: 389569047}
     GUIDsList: []
@@ -20017,8 +19970,76 @@ MonoBehaviour:
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 1417666065}
-    ActiveGameObject: {fileID: 1417666065}
+    - {fileID: 498454656}
+    ActiveGameObject: {fileID: 498454656}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 620925051}
+    ActiveGameObject: {fileID: 620925051}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 2084633632}
+    ActiveGameObject: {fileID: 2084633632}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 186219573}
+    ActiveGameObject: {fileID: 186219573}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 251191539}
+    ActiveGameObject: {fileID: 251191539}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 5745110}
+    ActiveGameObject: {fileID: 5745110}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1468418684}
+    ActiveGameObject: {fileID: 1468418684}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 2096532511}
+    - {fileID: 395876671}
+    ActiveGameObject: {fileID: 2096532511}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1036993847}
+    - {fileID: 339761486}
+    - {fileID: 498454656}
+    - {fileID: 620925051}
+    - {fileID: 928026018}
+    ActiveGameObject: {fileID: 339761486}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 330104699}
+    ActiveGameObject: {fileID: 330104699}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -20038,15 +20059,44 @@ MonoBehaviour:
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 186219573}
-    ActiveGameObject: {fileID: 186219573}
+    - {fileID: 323633658}
+    ActiveGameObject: {fileID: 323633658}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 323633658}
-    ActiveGameObject: {fileID: 323633658}
+    - {fileID: 154020627}
+    ActiveGameObject: {fileID: 154020627}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1706552905}
+    - {fileID: 1725460353}
+    - {fileID: 2097096856}
+    - {fileID: 369917301}
+    - {fileID: 1011293158}
+    ActiveGameObject: {fileID: 1725460353}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 317235696}
+    - {fileID: 1995289293}
+    - {fileID: 385089763}
+    - {fileID: 929652811}
+    - {fileID: 1076381675}
+    ActiveGameObject: {fileID: 1076381675}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 334035989}
+    ActiveGameObject: {fileID: 334035989}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -20066,85 +20116,15 @@ MonoBehaviour:
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 1468418684}
-    ActiveGameObject: {fileID: 1468418684}
+    - {fileID: 1417666065}
+    ActiveGameObject: {fileID: 1417666065}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 0}
-    ActiveGameObject: {fileID: 0}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1273898471}
-    ActiveGameObject: {fileID: 1273898471}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1752120506}
-    ActiveGameObject: {fileID: 1752120506}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 517511873}
-    ActiveGameObject: {fileID: 517511873}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 2084633632}
-    ActiveGameObject: {fileID: 2084633632}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 620925051}
-    ActiveGameObject: {fileID: 620925051}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 251191539}
-    ActiveGameObject: {fileID: 251191539}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 523251609}
-    ActiveGameObject: {fileID: 523251609}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1639286672}
-    ActiveGameObject: {fileID: 1639286672}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 334035989}
-    ActiveGameObject: {fileID: 334035989}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 928026018}
-    ActiveGameObject: {fileID: 928026018}
+    - {fileID: 1085239730}
+    ActiveGameObject: {fileID: 1085239730}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -20152,6 +20132,13 @@ MonoBehaviour:
   - list:
     - {fileID: 481646173}
     ActiveGameObject: {fileID: 481646173}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1948435433}
+    ActiveGameObject: {fileID: 1948435433}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -21394,10 +21381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37c6fa4b5cee4c2cb57e11f4910ce53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waypoints:
+  - {fileID: 251191543}
+  - {fileID: 334035993}
+  - {fileID: 1639286676}
+  - {fileID: 523251613}
+  - {fileID: 2084633636}
+  - {fileID: 1417666066}
   speed: 3.9
-  runSonar: 0
-  RunOnce: 1
 --- !u!1 &1969504187
 GameObject:
   m_ObjectHideFlags: 0
@@ -22759,7 +22750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2096532512
 Transform:
   m_ObjectHideFlags: 0
