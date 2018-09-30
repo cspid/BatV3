@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pluginID: 0
   last_scenesV2:
+  - guid: 39ce9e0e01a6c413d84d330c9d60ecad
+    pin: 0
   - guid: 0b99eb10462bd42db8eff4b0674c9714
     pin: 0
   - guid: dcc379842968b164588252d2f0927424
@@ -126,9 +128,9 @@ MonoBehaviour:
   lastIconSelect: []
   lasHiglightColorSelect:
   - serializedVersion: 2
-    rgba: 4292677870
-  - serializedVersion: 2
     rgba: 4294967295
+  - serializedVersion: 2
+    rgba: 4292677870
   - serializedVersion: 2
     rgba: 4279506129
   listKey: []
