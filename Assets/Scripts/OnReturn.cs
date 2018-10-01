@@ -25,12 +25,15 @@ public class OnReturn : MonoBehaviour
 	public float fadeSpeed = 0.03f;
    
 	public bool whiteOut;
+    public bool whiteIn;
 	public bool redIn;
 	public bool mirrorOut;
 
 	public bool fadeIn = true;
 	public bool fadeToBlack;
 	public bool lerpIcon;
+
+    bool nextScene;
     
 	public float fadeOutDelay = 0.03f;
 
@@ -45,6 +48,8 @@ public class OnReturn : MonoBehaviour
 
     public Transform startPos;
     public Transform endPos;
+
+    int levelScan = 1;
  
 	void Start()
 	{
@@ -71,9 +76,11 @@ public class OnReturn : MonoBehaviour
 		//Set black material
 		blackColor = new Color(0, 0, 0, 1);
 		blackMaterial.color = blackColor;
-		
-        
-	}
+
+       // print( "LEVEL" + (levelScan + 1).ToString());
+
+
+    }
  
 
     void Update()
@@ -145,29 +152,62 @@ public class OnReturn : MonoBehaviour
             //lerp!
             float t = currentLerpTime / lerpTime;
             endPos.position = Vector3.Lerp(endPos.position, startPos.position, t);
-		
+
             //When the red Icon is at start position, fade it out
-    		if(endPos.position == startPos.position){
-                    //fade red
-    				redColor.a = redColor.a - fadeSpeed/4;
-                    redBatMaterial.color = redColor;
-                    //fade red circle
-    				redCircleColor.a = redCircleColor.a - fadeSpeed / 4;
-                    redCircleMaterial.color = redCircleColor;
-                    //Bring back the white bat
-    				whiteColor.a = whiteColor.a + fadeSpeed / 3;
-                    whiteBatMaterial.color = whiteColor;
+            if (endPos.position == startPos.position)
+            {
+                //fade red
+                redColor.a = redColor.a - fadeSpeed / 4;
+                redBatMaterial.color = redColor;
+                //fade red circle
+                redCircleColor.a = redCircleColor.a - fadeSpeed / 4;
+                redCircleMaterial.color = redCircleColor;
+                //Bring back the white bat
+                whiteColor.a = whiteColor.a + fadeSpeed / 3;
+                whiteBatMaterial.color = whiteColor;
 
                 if (redColor.a <= 0)
-                {   
-    				Destroy(endPos.gameObject);
+                {
+                    levelScan = 1;
+                    nextScene = true;
+                    Destroy(endPos.gameObject);
                     print("Destroyed EndPos");
-					lerpIcon = false;
-					particlesArea.gradient1 = true;
-                }      
-    		}
-
+                    lerpIcon = false;
+                    particlesArea.gradient1 = true;
+                }
+            }
         }
+
+        if(nextScene ==true){
+            //Scan through level names to find the one that's enabled
+            if (GameObject.Find("LEVEL" + levelScan.ToString()) == null)
+            {
+                levelScan++;
+            } else {
+
+                GameObject.Find("LEVEL" + (levelScan + 1).ToString()).transform.GetChild(0).gameObject.SetActive(true); //Enable Next
+                GameObject.Find("LEVEL" + levelScan.ToString()).transform.GetChild(0).gameObject.SetActive(false); //Disable This
+                whiteIn = true; // fade in the sliders
+            }
+        }
+        if (whiteIn == true)
+        {
+            //Fade In Mirrors
+            mirrorColor.a = mirrorColor.a + fadeSpeed / 3;
+            mirrorMaterial.color = mirrorColor;
+            //Fade in red bat
+           // redColor.a = redColor.a + fadeSpeed / 4;
+           // redBatMaterial.color = redColor;
+            //Fade in red Circle
+            redCircleColor.a = redCircleColor.a + fadeSpeed / 4;
+            redCircleMaterial.color = redCircleColor;
+
+            if (whiteColor.a >= 1 && redColor.a >= 1 && redCircleColor.a >= 1)
+            {
+                whiteIn = false;
+            }
+        }
+
     }
 
 
