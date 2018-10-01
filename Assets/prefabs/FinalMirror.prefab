@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856081965489604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: -1, y: -0.5, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4088506523839888}
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876e5bf57df8a4ac1afc914e4d5d435d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirrorPosition: A5
+  mirrorPosition: D9
 --- !u!114 &114925815291248508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,7 +429,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0c7d87b403d2e4e8da717466e2d66047, type: 2}
+  - {fileID: 2100000, guid: d45a5dd6a6a4b60418883c4f47d8c0ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
