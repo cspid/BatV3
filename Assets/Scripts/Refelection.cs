@@ -45,8 +45,11 @@ public class Refelection : MonoBehaviour
 
         if (hit.collider == null)
         {
+            Ray2D ray = new Ray2D(origin, direction);
             Debug.Log("n");
-            
+            Transform waypoint = Instantiate(Waypointprefab, ray.GetPoint(100.0f) , Quaternion.identity);
+            trail.gameObject.GetComponent<pathFinder>().waypoints.Add(waypoint);
+            trail.GetComponent<pathFinder>().runSonar = true;
         }
         
         if (hit.collider != null)
