@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Mirror : MonoBehaviour {
 
     public bool positive;
 	// Use this for initialization
-	void Start () {
+	void Update () {
         if (positive)
         {
             this.transform.GetChild(0).transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -21,8 +22,5 @@ public class Mirror : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
