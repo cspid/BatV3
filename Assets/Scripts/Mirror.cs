@@ -21,10 +21,21 @@ public class Mirror : MonoBehaviour {
             this.transform.GetChild(0).transform.Rotate(0, 0, -45.0f);
         }
 	}
-	public void Switch(){
-		print("switch");
-		if (positive) positive = false;
-		if (positive == false) positive = true;
+	 void OnMouseOver(){
+        Debug.Log("Here");
+        if (Input.GetMouseButtonUp(0))
+        {
+            print("switch");
+            if (positive)
+            {
+                positive = false;
+            }
+            else
+            {
+                positive = true;
+            }
+
+        }
 	}
 	
 }
