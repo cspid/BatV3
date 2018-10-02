@@ -13,11 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pluginID: 0
   last_scenesV2:
+  - guid: 6267eae0731d949ec9d15b708b205f38
+    pin: 0
   - guid: ad65167337d1e994fbd81801c7601a48
     pin: 0
-  - guid: 0b99eb10462bd42db8eff4b0674c9714
-    pin: 0
   - guid: 1d293e116b55843acb4fb5bcd6f81cb1
+    pin: 0
+  - guid: 0b99eb10462bd42db8eff4b0674c9714
     pin: 0
   - guid: 5c6a7daafdb4bfc48956dfde14ce2b01
     pin: 0

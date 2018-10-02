@@ -12,6 +12,7 @@ public class Refelection : MonoBehaviour
     private Vector3 topOffset = new Vector3(0, 0.1f, 0);
 
     public Transform Waypointprefab;
+	public Refelection refelection;
 
     public GameObject trail;
     public bool HasShot = false;

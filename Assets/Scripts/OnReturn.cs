@@ -49,6 +49,9 @@ public class OnReturn : MonoBehaviour
     public Transform startPos;
     public Transform endPos;
 
+	public pathFinder pathFinderScript;
+	public Refelection refelection;
+
     int levelScan = 1;
  
 	void Start()
@@ -152,7 +155,7 @@ public class OnReturn : MonoBehaviour
             //lerp!
             float t = currentLerpTime / lerpTime;
             endPos.position = Vector3.Lerp(endPos.position, startPos.position, t);
-
+			//print(currentLerpTime);
             //When the red Icon is at start position, fade it out
             if (endPos.position == startPos.position)
             {
@@ -184,10 +187,15 @@ public class OnReturn : MonoBehaviour
             {
                 levelScan++;
             } else {
-
+				pathFinderScript.RunOnce = true;
+				pathFinderScript.runSonar = false;
+				pathFinderScript.waypoints.Clear();
+				refelection.HasShot = false;
                 GameObject.Find("LEVEL" + (levelScan + 1).ToString()).transform.GetChild(0).gameObject.SetActive(true); //Enable Next
                 GameObject.Find("LEVEL" + levelScan.ToString()).transform.GetChild(0).gameObject.SetActive(false); //Disable This
-                whiteIn = true; // fade in the sliders
+                
+				whiteIn = true; // fade in the sliders
+				nextScene = false;
             }
         }
         if (whiteIn == true)
