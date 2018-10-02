@@ -98,6 +98,7 @@ public class OnReturn : MonoBehaviour
             if (blackColor.a <= 0)
             {
 				fadeIn = false;
+
             }
         }
 
@@ -171,13 +172,16 @@ public class OnReturn : MonoBehaviour
 
                 if (redColor.a <= 0)
                 {
-                    levelScan = 1;
+                    //levelScan += 1;
                     nextScene = true;
                     Destroy(endPos.gameObject);
                     print("Destroyed EndPos");
+                    
                     lerpIcon = false;
                     particlesArea.gradient1 = true;
+
                 }
+                
             }
         }
 
@@ -187,32 +191,50 @@ public class OnReturn : MonoBehaviour
             {
                 levelScan++;
             } else {
-				pathFinderScript.RunOnce = true;
+                levelScan++;
+                pathFinderScript.RunOnce = true;
 				pathFinderScript.runSonar = false;
 				pathFinderScript.waypoints.Clear();
+                Debug.Log("FUCK");
 				refelection.HasShot = false;
-                GameObject.Find("LEVEL" + (levelScan + 1).ToString()).transform.GetChild(0).gameObject.SetActive(true); //Enable Next
-                GameObject.Find("LEVEL" + levelScan.ToString()).transform.GetChild(0).gameObject.SetActive(false); //Disable This
+                GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).gameObject.SetActive(true); //Enable Next
+                GameObject.Find("LEVEL" + (levelScan -1).ToString()).transform.GetChild(0).gameObject.SetActive(false); //Disable This
                 
-				whiteIn = true; // fade in the sliders
-				nextScene = false;
+
+                whiteIn = true; // fade in the sliders
+                nextScene = false;
+
+
+                //Reset End pos tranform, goal transform , goal script
+                endPos = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).transform;
+                goal = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).transform;
+                goalScript = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).GetComponent<OnHitGoal>();
+
+
+
+
+                Debug.Log("FUCK2");
             }
         }
         if (whiteIn == true)
         {
+            Debug.Log("FUCK3");
             //Fade In Mirrors
             mirrorColor.a = mirrorColor.a + fadeSpeed / 3;
             mirrorMaterial.color = mirrorColor;
             //Fade in red bat
-           // redColor.a = redColor.a + fadeSpeed / 4;
-           // redBatMaterial.color = redColor;
+            // redColor.a = redColor.a + fadeSpeed / 4;
+            // redBatMaterial.color = redColor;
             //Fade in red Circle
+            
             redCircleColor.a = redCircleColor.a + fadeSpeed / 4;
             redCircleMaterial.color = redCircleColor;
+            
 
             if (whiteColor.a >= 1 && redColor.a >= 1 && redCircleColor.a >= 1)
             {
                 whiteIn = false;
+                Debug.Log("FUCK4");
             }
         }
 
@@ -229,8 +251,10 @@ public class OnReturn : MonoBehaviour
 			if (other.gameObject.tag == "trail" && goalScript.hitGoal == true)
 			{
 				print("Returned Home");
-				//begin win conditions
-				whiteOut = true;
+                //begin win conditions
+                Debug.Log("FUCk5");
+
+                whiteOut = true;
 			}
 		}
 	}
