@@ -3444,7 +3444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &330104700
 Transform:
   m_ObjectHideFlags: 0
@@ -3474,7 +3474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0871ba0d2420a0a46a3bf19b5959b8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positive: 0
+  positive: 1
 --- !u!1 &334035989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,7 +3571,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 337349783}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268346, w: 0.9238795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 5, z: 1}
   m_Children: []
@@ -5678,7 +5678,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 556266848}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268346, w: 0.9238795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 5, z: 1}
   m_Children: []
@@ -11225,7 +11225,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054258363}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268346, w: 0.9238795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 5, z: 1}
   m_Children: []
@@ -16337,14 +16337,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4088506523839888, guid: 365776a6f643b8b4aa51ebfa310110b0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.38268346
-      objectReference: {fileID: 0}
-    - target: {fileID: 4088506523839888, guid: 365776a6f643b8b4aa51ebfa310110b0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.9238795
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365776a6f643b8b4aa51ebfa310110b0, type: 2}
   m_IsPrefabAsset: 0
@@ -18716,7 +18708,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725460353}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268346, w: 0.9238795}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 5, z: 1}
   m_Children: []
@@ -19747,67 +19739,6 @@ MonoBehaviour:
   Hash2: []
   Hash3:
   - list:
-<<<<<<< HEAD
-    - {fileID: 186219573}
-    ActiveGameObject: {fileID: 186219573}
-=======
-    - {fileID: 330104699}
-    ActiveGameObject: {fileID: 330104699}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1054258363}
-    ActiveGameObject: {fileID: 1054258363}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 5745110}
-    ActiveGameObject: {fileID: 5745110}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 481646173}
-    ActiveGameObject: {fileID: 481646173}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 323633658}
-    ActiveGameObject: {fileID: 323633658}
->>>>>>> origin/Carl
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 330104699}
-    ActiveGameObject: {fileID: 330104699}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 808342508}
-    ActiveGameObject: {fileID: 808342508}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 94023899}
-    ActiveGameObject: {fileID: 94023899}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
     - {fileID: 2051676856}
     ActiveGameObject: {fileID: 2051676856}
     GUIDsList: []
@@ -19882,6 +19813,13 @@ MonoBehaviour:
     wasInit: 0
     CashedBool: 0
   - list:
+    - {fileID: 330104699}
+    ActiveGameObject: {fileID: 330104699}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
     - {fileID: 1527174782}
     ActiveGameObject: {fileID: 1527174782}
     GUIDsList: []
@@ -19898,6 +19836,13 @@ MonoBehaviour:
   - list:
     - {fileID: 643049935}
     ActiveGameObject: {fileID: 643049935}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 186219573}
+    ActiveGameObject: {fileID: 186219573}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -19923,10 +19868,16 @@ MonoBehaviour:
     GUIDsActiveGameObject: 
     wasInit: 0
     CashedBool: 0
-<<<<<<< HEAD
   - list:
     - {fileID: 389569047}
     ActiveGameObject: {fileID: 389569047}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 94023899}
+    ActiveGameObject: {fileID: 94023899}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -19952,8 +19903,13 @@ MonoBehaviour:
     GUIDsActiveGameObject: 
     wasInit: 0
     CashedBool: 0
-=======
->>>>>>> origin/Carl
+  - list:
+    - {fileID: 1273898471}
+    ActiveGameObject: {fileID: 1273898471}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
   Hash4: []
   Hash5: []
   Hash5_Fix2_0:
