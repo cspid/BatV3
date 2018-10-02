@@ -59,7 +59,7 @@ public class pathFinder : MonoBehaviour
         if (col.gameObject.tag == "Exit" )
         {
             Debug.Log("Resart Here");
-			transform.position = startPos.transform.position;
+			transform.position = startPos.transform.position + new Vector3 (0,0.25f,0);
 			RunOnce = true;
 			runSonar = false;
 			refelection.HasShot = false;

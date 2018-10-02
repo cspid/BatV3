@@ -27,7 +27,7 @@ public class Refelection : MonoBehaviour
 
         Debug.DrawLine(transform.position + topOffset, transform.up, Color.green);
 
-        if (Input.GetMouseButtonDown(0) && !HasShot )
+        if (Input.GetKeyDown(KeyCode.Space) && !HasShot )
         {
             HasShot = true;
             ShootRay(this.transform.position, this.transform.up, mirrorLayer);
