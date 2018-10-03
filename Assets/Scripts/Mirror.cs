@@ -6,8 +6,16 @@ using UnityEngine;
 public class Mirror : MonoBehaviour {
 
     public bool positive;
-	// Use this for initialization
-	void Update () {
+    public bool hasFlipped = false;
+
+    private Attempts AttemptsScript;
+
+    void Start()
+    {
+        AttemptsScript = GameObject.FindGameObjectWithTag("Bat").GetComponent<Attempts>();
+    }
+    // Use this for initialization
+    void Update () {
         if (positive)
         {
             this.transform.GetChild(0).transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -22,19 +30,56 @@ public class Mirror : MonoBehaviour {
         }
 	}
 	 void OnMouseOver(){
-        Debug.Log("Here");
+       
         if (Input.GetMouseButtonUp(0))
         {
             print("switch");
-            if (positive)
+            if (AttemptsScript.numberOfTries > 0)
             {
-                positive = false;
-            }
-            else
-            {
-                positive = true;
-            }
+                if (hasFlipped)
+                {
+                    hasFlipped = false;
+                    AttemptsScript.Add();
 
+                    //fipped back
+                    //change material back to normal here
+
+                }
+                else
+                {
+                    hasFlipped = true;
+                    AttemptsScript.Subtract();
+
+                    //has been flipped
+                    //change material here
+                }
+
+                if (positive)
+                {
+                    positive = false;
+                }
+                else
+                {
+                    positive = true;
+                }
+            }
+            else if(AttemptsScript.numberOfTries == 0 && hasFlipped == true)
+            {
+                hasFlipped = false;
+                AttemptsScript.Add();
+
+                //fipped back
+                //change material back to normal here
+              
+                if (positive)
+                {
+                    positive = false;
+                }
+                else
+                {
+                    positive = true;
+                }
+            }
         }
 	}
 	

@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 65066837254479934}
   - component: {fileID: 114946494495059716}
   - component: {fileID: 54056769096816522}
+  - component: {fileID: 114152242228077128}
   m_Layer: 0
   m_Name: White Bat
-  m_TagString: Untagged
+  m_TagString: Bat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,6 +149,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 29.399998, y: 3.8475127, z: 4.93}
   m_Center: {x: 0, y: -1.2198018, z: 0}
+--- !u!114 &114152242228077128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312590444120446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dadb1e22b4555249b1781745cae44cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfTries: 3
+  numberOfFlipsText: {fileID: 0}
+  attemptsList: 0300000005000000040000000600000007000000
 --- !u!114 &114326057066941008
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6773,11 +6773,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436504946}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &439391822 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1856081965489604, guid: 365776a6f643b8b4aa51ebfa310110b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 2082430897}
 --- !u!1 &451522129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10456,11 +10451,6 @@ Prefab:
       propertyPath: m_Name
       value: FinalMirror (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 23301323770863552, guid: 365776a6f643b8b4aa51ebfa310110b0,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365776a6f643b8b4aa51ebfa310110b0, type: 2}
   m_IsPrefabAsset: 0
@@ -11287,6 +11277,7 @@ RectTransform:
   - {fileID: 1787559779}
   - {fileID: 312696766}
   - {fileID: 650549334}
+  - {fileID: 1917572273}
   m_Father: {fileID: 777630987}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12416,6 +12407,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756523148}
   m_CullTransparentMesh: 0
+--- !u!1 &762027461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1856081965489604, guid: 365776a6f643b8b4aa51ebfa310110b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 876215374}
 --- !u!1 &768994385
 GameObject:
   m_ObjectHideFlags: 0
@@ -22354,11 +22350,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114326057066941008, guid: 0db2452b5e0f1364ca03e3c36312dfba,
+    - target: {fileID: 114152242228077128, guid: 0db2452b5e0f1364ca03e3c36312dfba,
         type: 2}
-      propertyPath: trail
+      propertyPath: numberOfFlipsText
       value: 
-      objectReference: {fileID: 1948435433}
+      objectReference: {fileID: 1917572274}
     - target: {fileID: 114946494495059716, guid: 0db2452b5e0f1364ca03e3c36312dfba,
         type: 2}
       propertyPath: goalScript
@@ -22384,10 +22380,11 @@ Prefab:
       propertyPath: pathFinderScript
       value: 
       objectReference: {fileID: 1948435438}
-    - target: {fileID: 1680465678237964, guid: 0db2452b5e0f1364ca03e3c36312dfba, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 114326057066941008, guid: 0db2452b5e0f1364ca03e3c36312dfba,
+        type: 2}
+      propertyPath: trail
+      value: 
+      objectReference: {fileID: 1948435433}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0db2452b5e0f1364ca03e3c36312dfba, type: 2}
   m_IsPrefabAsset: 0
@@ -29520,6 +29517,62 @@ MonoBehaviour:
   Hash2: []
   Hash3:
   - list:
+    - {fileID: 1624745996}
+    ActiveGameObject: {fileID: 1624745996}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 389569047}
+    ActiveGameObject: {fileID: 389569047}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1417666065}
+    ActiveGameObject: {fileID: 1417666065}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 762027461}
+    ActiveGameObject: {fileID: 762027461}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1917572272}
+    ActiveGameObject: {fileID: 1917572272}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 687916152}
+    ActiveGameObject: {fileID: 687916152}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1641466752}
+    ActiveGameObject: {fileID: 1641466752}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 238940405}
+    ActiveGameObject: {fileID: 238940405}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
     - {fileID: 1010507308}
     ActiveGameObject: {fileID: 1010507308}
     GUIDsList: []
@@ -29543,13 +29596,6 @@ MonoBehaviour:
   - list:
     - {fileID: 1246712321}
     ActiveGameObject: {fileID: 1246712321}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1624745996}
-    ActiveGameObject: {fileID: 1624745996}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -29597,13 +29643,6 @@ MonoBehaviour:
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 389569047}
-    ActiveGameObject: {fileID: 389569047}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
     - {fileID: 817351318}
     ActiveGameObject: {fileID: 817351318}
     GUIDsList: []
@@ -29632,13 +29671,6 @@ MonoBehaviour:
     wasInit: 0
     CashedBool: 0
   - list:
-    - {fileID: 1417666065}
-    ActiveGameObject: {fileID: 1417666065}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
     - {fileID: 91265271}
     ActiveGameObject: {fileID: 91265271}
     GUIDsList: []
@@ -29648,41 +29680,6 @@ MonoBehaviour:
   - list:
     - {fileID: 1101040053}
     ActiveGameObject: {fileID: 1101040053}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 439391822}
-    ActiveGameObject: {fileID: 439391822}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 947392164}
-    ActiveGameObject: {fileID: 947392164}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 484399666}
-    ActiveGameObject: {fileID: 484399666}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 474379759}
-    ActiveGameObject: {fileID: 474379759}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 35453279}
-    ActiveGameObject: {fileID: 35453279}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -30883,6 +30880,83 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365776a6f643b8b4aa51ebfa310110b0, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1917572272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917572273}
+  - component: {fileID: 1917572275}
+  - component: {fileID: 1917572274}
+  m_Layer: 5
+  m_Name: NumberOfTries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1917572273
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917572272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 687916156}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 14, y: 1160}
+  m_SizeDelta: {x: 80, y: 85.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1917572274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917572272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 75
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 75
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '3
+
+'
+--- !u!222 &1917572275
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917572272}
+  m_CullTransparentMesh: 0
 --- !u!1 &1921415539
 GameObject:
   m_ObjectHideFlags: 0

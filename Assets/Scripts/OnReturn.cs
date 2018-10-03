@@ -209,6 +209,8 @@ public class OnReturn : MonoBehaviour
                 endPos = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).transform;
                 goal = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).transform;
                 goalScript = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).GetComponent<OnHitGoal>();
+                this.gameObject.GetComponent<Attempts>().SetNumberOfTries(levelScan -1);
+                //move number of flips text to red circle it here
 
 
 

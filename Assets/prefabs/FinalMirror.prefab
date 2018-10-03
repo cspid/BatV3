@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positive: 1
+  hasFlipped: 0
 --- !u!212 &212285878395469174
 SpriteRenderer:
   m_ObjectHideFlags: 1
