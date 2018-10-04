@@ -9,6 +9,7 @@ public class Mirror : MonoBehaviour {
     public bool hasFlipped = false;
 
     private Attempts AttemptsScript;
+	public Color switchColor;
 
     void Start()
     {
@@ -43,6 +44,8 @@ public class Mirror : MonoBehaviour {
 
                     //fipped back
                     //change material back to normal here
+					GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, 1);
+
 
                 }
                 else
@@ -50,8 +53,10 @@ public class Mirror : MonoBehaviour {
                     hasFlipped = true;
                     AttemptsScript.Subtract();
 
-                    //has been flipped
-                    //change material here
+					//has been flipped
+					//change material here
+					GetComponentInChildren<SpriteRenderer>().color = switchColor;
+					print(transform.GetChild(1).name);
                 }
 
                 if (positive)
@@ -70,6 +75,7 @@ public class Mirror : MonoBehaviour {
 
                 //fipped back
                 //change material back to normal here
+				GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, 1);
               
                 if (positive)
                 {

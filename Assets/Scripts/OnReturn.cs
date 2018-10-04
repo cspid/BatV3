@@ -52,10 +52,18 @@ public class OnReturn : MonoBehaviour
 	public pathFinder pathFinderScript;
 	public Refelection refelection;
 
+	public Attempts attempts;
+	public Transform counter;
+
+
     int levelScan = 1;
  
 	void Start()
 	{
+
+		//counter.position = GameObject.Find("Red Goal").transform.position;
+
+
         //Set white material
 		whiteColor = new Color(1, 1, 1, 1);
 		whiteBatMaterial.color = whiteColor;
@@ -109,6 +117,7 @@ public class OnReturn : MonoBehaviour
             whiteBatMaterial.color = whiteColor;
             
             if (whiteColor.a <= 0){
+				print("white faded out, start fading red  Bat In");
                 redIn = true;
                 whiteOut = false;
             }
@@ -124,7 +133,7 @@ public class OnReturn : MonoBehaviour
             {
                 redIn = false;             
 				mirrorOut = true;
-				print("fade out red");
+				print("red bat faded in, start fading out mirrors");
 
             }      
         }
@@ -140,7 +149,7 @@ public class OnReturn : MonoBehaviour
 				currentLerpTime = 0f;   //Set up the lerp
 				lerpIcon = true;
                 mirrorOut = false;
-                print("fade mirrors out");
+                print("mirrors faded out, Start Lerp");
             }
         }
 
@@ -172,6 +181,8 @@ public class OnReturn : MonoBehaviour
 
                 if (redColor.a <= 0)
                 {
+					print("Red bat faded out, initializing next scene");
+					
                     //levelScan += 1;
                     nextScene = true;
                     Destroy(endPos.gameObject);
@@ -195,11 +206,11 @@ public class OnReturn : MonoBehaviour
                 pathFinderScript.RunOnce = true;
 				pathFinderScript.runSonar = false;
 				pathFinderScript.waypoints.Clear();
-                Debug.Log("FUCK");
+//                Debug.Log("FUCK");
 				refelection.HasShot = false;
                 GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).gameObject.SetActive(true); //Enable Next
                 GameObject.Find("LEVEL" + (levelScan -1).ToString()).transform.GetChild(0).gameObject.SetActive(false); //Disable This
-                
+				//counter.position = GameObject.Find("Red Goal").transform.position;
 
                 whiteIn = true; // fade in the sliders
                 nextScene = false;
@@ -209,18 +220,18 @@ public class OnReturn : MonoBehaviour
                 endPos = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).transform;
                 goal = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).transform;
                 goalScript = GameObject.Find("LEVEL" + (levelScan).ToString()).transform.GetChild(0).transform.GetChild(0).GetComponent<OnHitGoal>();
-                this.gameObject.GetComponent<Attempts>().SetNumberOfTries(levelScan -1);
+                attempts.SetNumberOfTries(levelScan -1);
                 //move number of flips text to red circle it here
 
 
 
 
-                Debug.Log("FUCK2");
+//                Debug.Log("FUCK2");
             }
         }
         if (whiteIn == true)
         {
-            Debug.Log("FUCK3");
+//            Debug.Log("FUCK3");
             //Fade In Mirrors
             mirrorColor.a = mirrorColor.a + fadeSpeed / 3;
             mirrorMaterial.color = mirrorColor;
@@ -233,10 +244,10 @@ public class OnReturn : MonoBehaviour
             redCircleMaterial.color = redCircleColor;
             
 
-            if (whiteColor.a >= 1 && redColor.a >= 1 && redCircleColor.a >= 1)
+            if (mirrorColor.a >= 1 && redCircleColor.a >= 1)
             {
                 whiteIn = false;
-                Debug.Log("FUCK4");
+           //     Debug.Log("FUCK4");
             }
         }
 
@@ -254,7 +265,7 @@ public class OnReturn : MonoBehaviour
 			{
 				print("Returned Home");
                 //begin win conditions
-                Debug.Log("FUCk5");
+//                Debug.Log("FUCk5");
 
                 whiteOut = true;
 			}
