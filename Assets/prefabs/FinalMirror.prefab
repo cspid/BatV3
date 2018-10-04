@@ -519,6 +519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positive: 1
+  hasFlipped: 0
+  switchColor: {r: 1, g: 0.62911344, b: 0, a: 1}
 --- !u!212 &212285878395469174
 SpriteRenderer:
   m_ObjectHideFlags: 1

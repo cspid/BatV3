@@ -8,6 +8,7 @@ TagManager:
   - trail
   - Mirror
   - Exit
+  - Bat
   layers:
   - Default
   - TransparentFX
