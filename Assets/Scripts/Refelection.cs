@@ -41,7 +41,7 @@ public class Refelection : MonoBehaviour
 
        // Debug.Log("shoot");
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, 100.0f, layer);
-        Debug.Log(hit.collider);
+//        Debug.Log(hit.collider);
         //  Debug.DrawLine(origin, direction, Color.red, 3.0f);
 
         if (hit.collider == null)
