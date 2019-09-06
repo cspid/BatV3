@@ -1,64 +1,99 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
+[TypeInfoBox("This script handles the level's win conditions and transitioning to the next scene")]
 public class OnReturn : MonoBehaviour
 {
-    //This script handles the level's win conditions and transitioning to the next scene
-	public OnHitGoal goalScript;
-	public ParticlesArea particlesArea;
+    #region Variables
 
-	public Material whiteBatMaterial;
-	public Material whiteCircleMaterial;
-	public Material redBatMaterial;
-	public Material redCircleMaterial;
-	public Material blackMaterial;
-	public Material mirrorMaterial;
+    #region Script Refs
+    [FoldoutGroup("Script References")]
+    public pathFinder pathFinderScript;
+    [FoldoutGroup("Script References")]
+    public Refelection refelection;
+    [FoldoutGroup("Script References")]
+    public Attempts attempts;
+    [FoldoutGroup("Script References")]
+    public OnHitGoal goalScript;
+    [FoldoutGroup("Script References")]
+    public ParticlesArea particlesArea;
+    #endregion
 
-	Color whiteColor;
+    #region Material Refs
+    [FoldoutGroup("Material References")]
+    public Material whiteBatMaterial;
+    [FoldoutGroup("Material References")]
+    public Material whiteCircleMaterial;
+    [FoldoutGroup("Material References")]
+    public Material redBatMaterial;
+    [FoldoutGroup("Material References")]
+    public Material redCircleMaterial;
+    [FoldoutGroup("Material References")]
+    public Material blackMaterial;
+    [FoldoutGroup("Material References")]
+    public Material mirrorMaterial;
+    #endregion
+
+    #region Material Refs
+
+    Color whiteColor;
 	Color whiteCircleColor;
 	Color redColor;
 	Color redCircleColor;
 	Color blackColor;
 	Color mirrorColor;
-    
-	public float fadeSpeed = 0.03f;
-   
-	public bool whiteOut;
+    #endregion
+
+    #region bool Refs
+    [FoldoutGroup("Bools")]
+    public bool whiteOut;
+    [FoldoutGroup("Bools")]
     public bool whiteIn;
-	public bool redIn;
-	public bool mirrorOut;
-
-	public bool fadeIn = true;
-	public bool fadeToBlack;
-	public bool lerpIcon;
-
+    [FoldoutGroup("Bools")]
+    public bool redIn;
+    [FoldoutGroup("Bools")]
+    public bool mirrorOut;
+    [FoldoutGroup("Bools")]
+    public bool fadeIn = true;
+    [FoldoutGroup("Bools")]
+    public bool fadeToBlack;
+    [FoldoutGroup("Bools")]
+    public bool lerpIcon;
     bool nextScene;
-    
-	public float fadeOutDelay = 0.03f;
+    #endregion
 
-	public Transform start;
-	public Transform goal;
-
+    #region floats 
+    //Fade Out
+    [FoldoutGroup("Floats")]
+    public float fadeSpeed = 0.03f;
+    [FoldoutGroup("Floats")]
+    public float fadeOutDelay = 0.03f;
     //Lerp
-	public float lerpTime = 2f;
+    [FoldoutGroup("Floats")]
+    public float lerpTime = 2f;
     float currentLerpTime;
-
     float moveDistance = 10f;
+    #endregion
 
+    #region Transform Refs
+    [FoldoutGroup("Transforms")]
+    public Transform start;
+    [FoldoutGroup("Transforms")]
+    public Transform goal;
+    [FoldoutGroup("Transforms")]
     public Transform startPos;
+    [FoldoutGroup("Transforms")]
     public Transform endPos;
-
-	public pathFinder pathFinderScript;
-	public Refelection refelection;
-
-	public Attempts attempts;
-	public Transform counter;
-
+    [FoldoutGroup("Transforms")]
+    public Transform counter;
+    #endregion
 
     int levelScan = 1;
- 
-	void Start()
+
+    #endregion
+    void Start()
 	{
 
 		//counter.position = GameObject.Find("Red Goal").transform.position;
