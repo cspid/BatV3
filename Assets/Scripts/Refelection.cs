@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class Refelection : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class Refelection : MonoBehaviour
 
         Debug.DrawLine(transform.position + topOffset, transform.up, Color.green);
 
-        if (Input.GetKeyDown(KeyCode.Space) && !HasShot )
+        if (Input.GetKeyDown(KeyCode.Space) && !HasShot|| Input.touchCount >=2 && !HasShot)
         {
             HasShot = true;
             ShootRay(this.transform.position, this.transform.up, mirrorLayer);
